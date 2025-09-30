@@ -10,6 +10,7 @@ ps aux
 
 criar chave publica ssh -> ssh-keygen -o -a 100 -t ed25519 -I ~/.ssh/id_chave -C 'email@exemplo.com'  
 ativar chave permanente no servidor -> ssh-add ~/.ssh/id_'id_chave'
+retornar chave publica -> ssh-keygen -y -f 'pasta_da_chave'
 consultar chaves na maquina -> eval "(ssh-agent -s)"
 
 remover chave da maquina -> rm -f ~/.ssh/id_'id_chave'
@@ -22,6 +23,17 @@ ip route show
 ip r
 hostname -I
 
+CURL keywargs:
+    curl -O <https://url> -> Download arquivo via link
+    curl -o <novo_nome> <https://url> -> Download de arquivo com nomenclatura alterada
+    curl -T <local_arquivo> <ftp://url> -> Upload de arquivos
+    curl -x <proxy_url>:<porta>  <https://url> -> Define um proxy para acesso a url
+    curl -x <https://url>:<porta> -U <username>:<password> <https://url> -> Define um proxy com login
+    curl -H "X-Custom-Header: value" <https://url> -> Efetua a requisição encaminhando um headers
+    curl -b "name=value" <https://url> -> Efetua o envio de cookies para a url
+    curl -c <name_file.txt> <https://url> -> Salva os cookies no arquivo especificado
+    curl -d "name=value" <https://url> -> Efetua o encaminhamento de arquivo via post
+    curl --json '{"key":"value"}' <https://url> -> Efetua o envio de um arquivo json
 
 
 UFW keyargs:
@@ -33,4 +45,5 @@ UFW keyargs:
     sudo ufw status
     sudo ufw delete deny <port>/<optional: protocol>
     
+
 
