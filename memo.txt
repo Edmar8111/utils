@@ -1,0 +1,36 @@
+instalar curl em distros linux -> apt update && apt install -y curl
+
+listar pastas ocultas distros linux -> ls -l 
+ls -la
+
+listar dispositivos conectados -> df -h
+
+lista processos em distros linux -> ps 
+ps aux
+
+criar chave publica ssh -> ssh-keygen -o -a 100 -t ed25519 -I ~/.ssh/id_chave -C 'email@exemplo.com'  
+ativar chave permanente no servidor -> ssh-add ~/.ssh/id_'id_chave'
+consultar chaves na maquina -> eval "(ssh-agent -s)"
+
+remover chave da maquina -> rm -f ~/.ssh/id_'id_chave'
+remover chave agente -> ssh-add -d ~/.ssh/id_'id_chave'
+ssh-add -D 
+
+retornar informações de rede -> ip a
+ip addr show
+ip route show
+ip r
+hostname -I
+
+
+
+UFW keyargs:
+    ativar conexão de portas via ufw -> sudo ufw allow <start_port>:<end_port>/<protocol>
+    desativar conexão de porta -> sudo ufw deny <port>/<optional: protocol>
+    
+    sudo ufw show
+    sudo ufw show raw
+    sudo ufw status
+    sudo ufw delete deny <port>/<optional: protocol>
+    
+
