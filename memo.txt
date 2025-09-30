@@ -1,3 +1,8 @@
+Compilar arquivo para .exe via PyInstaller -> pyinstaller --onefile --noconsole --name <NOME_EXECUTAVEL> <NOME_ARQUIVO.py> 
+Compilar arquivo para .exe via Nuitka -> python -m nuitka --standalone --onefile --windows-disable-console --output-dir=dist <NOME_ARQUIVO.py>
+Compilar via Poweshell(.ps1) -> Install-Module -Name ps2exe -Scope CurrentUser -Force : Invoke-ps2exe .\<SCRIPT.ps1> -noConsole -icon "meu.ico"
+
+
 instalar curl em distros linux -> apt update && apt install -y curl
 
 listar pastas ocultas distros linux -> ls -l 
@@ -45,5 +50,6 @@ UFW keyargs:
     sudo ufw status
     sudo ufw delete deny <port>/<optional: protocol>
     
+
 
 
