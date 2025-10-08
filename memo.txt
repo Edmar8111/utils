@@ -50,6 +50,21 @@ UFW keyargs:
     sudo ufw status
     sudo ufw delete deny <port>/<optional: protocol>
     
+POWERSHELL CURL WITH HEADERS AND PAYLOAD:
 
+    $headers = @{
+        "Authorization" = "Bearer $token"
+        "Content-Type"  = "application/json"
+    }
+
+    $body = @{
+        parametro = "valor"
+    } | ConvertTo-Json
+
+    Invoke-RestMethod -Uri "http://localhost:5000/auth" 
+    -Method POST 
+    -ContentType "application/json" 
+    -Body $body -> Somente via metodo post
+    -Headers $headers
 
 
