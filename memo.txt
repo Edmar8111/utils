@@ -67,4 +67,6 @@ POWERSHELL CURL WITH HEADERS AND PAYLOAD:
     -Body $body -> Somente via metodo post
     -Headers $headers
 
+para ativar a execução de scripts no powershell, e virtual venv -> Set-ExecutionPolicy -ExecutionPolicy <PolicyName> -Scope <scope>
+
 
