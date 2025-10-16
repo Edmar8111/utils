@@ -5,6 +5,14 @@ docker build -t container-name .
 # Executar o container
 docker run -d -p <port>:<port> container-name
 
+docker version -> Mostra as versões do cliente e do servidor (daemon).
+docker info -> Exibe detalhes do ambiente (imagens, containers, drivers, etc.).
+docker ps	-> Lista containers em execução.
+docker ps -a -> Lista todos os containers, inclusive os parados.
+docker stats -> Mostra o consumo de CPU, memória e rede em tempo real.
+docker system df -> Mostra quanto espaço suas imagens e containers ocupam.
+
+
 DOCKER CONCEITOS BASE
 
 rodar distro -> docker run -it distro bash -> run distro
