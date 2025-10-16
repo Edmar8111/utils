@@ -4,3 +4,27 @@ docker build -t container-name .
   
 # Executar o container
 docker run -d -p <port>:<port> container-name
+
+DOCKER CONCEITOS BASE
+
+rodar distro -> docker run -it distro bash -> run distro
+rodar distro especificas -> docker exec -ti distro sh
+
+criar container "--name nome_container"-> docker run -dti --name NOME_CONTAINER nome_image:versão_opcional
+
+cria container com variavel de ambiente "-e VARIAVEL=valor" -> docker run -dti --name NOME_CONTAINER -e DB_NAME=bancoDados nome_image:versão_opcional
+
+criar container com porta personalizada "-p portaHost:portaContainer"-> docker run -dti --name NOME_CONTAINER -e BD_NAME=bancoDados -p 8080:80 nome_image:versão_opcional
+
+inspencionar container "inspect" -> docker inspect NOME_CONTAINER
+
+
+
+demais config:
+    0ª - Rede personalizada -> --network nome_rede
+
+    1ª - Com volume compartilhado -v /caminho/host/container
+
+    2ª Com limite de memoria -m 512m
+
+    3ª Com limite de CPU --cpus='1.0'
