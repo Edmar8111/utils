@@ -32,8 +32,15 @@ IV -> Gerenciamento de volumes e redes
     docker network create <nome> -> Cria uma rede personalizada.
     docker network inspect <nome> -> Mostra detalhes da rede.
 
+V -> Docker Compose (multi-containers)
+    docker compose up -> Sobe todos os serviços definidos no docker-compose.yml.
+    docker compose up -d -> Executa em background.
+    docker compose down	-> Para e remove os containers.
+    docker compose logs -f -> Mostra logs em tempo real.
+    docker compose ps -> Lista containers criados pelo Compose.
 
-V -> DOCKER CONCEITOS BASE
+
+VI -> DOCKER CONCEITOS BASE
 
     rodar distro -> docker run -it distro bash -> run distro
     rodar distro especificas -> docker exec -ti distro sh
