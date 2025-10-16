@@ -1,30 +1,50 @@
+I -> Comandos de verificação e diagnóstico####
+    docker version -> Mostra as versões do cliente e do servidor (daemon).
+    docker info -> Exibe detalhes do ambiente (imagens, containers, drivers, etc.).
+    docker ps	-> Lista containers em execução.
+    docker ps -a -> Lista todos os containers, inclusive os parados.
+    docker stats -> Mostra o consumo de CPU, memória e rede em tempo real.
+    docker system df -> Mostra quanto espaço suas imagens e containers ocupam.
 
-docker images	-> Lista todas as imagens locais.
-docker pull <imagem> -> Faz o download de uma imagem do Docker Hub (ex: docker pull python:3.12).
-docker build -t <nome>:<tag> . -> Constrói uma imagem a partir de um Dockerfile.
-docker rmi <id ou nome>	-> Remove uma imagem.
-docker tag <imagem_origem> <novo_nome>	-> Renomeia uma imagem.
+II -> Comandos de imagens
+    docker images	-> Lista todas as imagens locais.
+    docker pull <imagem> -> Faz o download de uma imagem do Docker Hub (ex: docker pull python:3.12).
+    docker build -t <nome>:<tag> . -> Constrói uma imagem a partir de um Dockerfile.
+    docker rmi <id ou nome>	-> Remove uma imagem.
+    docker tag <imagem_origem> <novo_nome>	-> Renomeia uma imagem.
 
-docker version -> Mostra as versões do cliente e do servidor (daemon).
-docker info -> Exibe detalhes do ambiente (imagens, containers, drivers, etc.).
-docker ps	-> Lista containers em execução.
-docker ps -a -> Lista todos os containers, inclusive os parados.
-docker stats -> Mostra o consumo de CPU, memória e rede em tempo real.
-docker system df -> Mostra quanto espaço suas imagens e containers ocupam.
+III -> Comandos de containers
+    docker run <imagem>	-> Cria e executa um container novo.
+    docker run -d <imagem> -> Executa em modo detach (segundo plano).
+    docker run -it <imagem> /bin/bash -> Acessa o terminal interativo do container.
+    docker exec -it <nome ou id> bash -> Entra em um container já em execução.
+    docker stop <nome ou id> -> Para o container.
+    docker start <nome ou id> -> Inicia um container parado.
+    docker restart <nome ou id>	-> Reinicia um container.
+    docker rm <nome ou id>	-> Remove um container.
+    docker logs <nome ou id> -> Mostra os logs do container.
+
+IV -> Gerenciamento de volumes e redes
+    docker volume ls -> Lista volumes criados.
+    docker volume create <nome>	-> Cria um volume persistente.
+    docker volume rm <nome>	-> Remove volume.
+    docker network ls -> Lista redes do Docker.
+    docker network create <nome> -> Cria uma rede personalizada.
+    docker network inspect <nome> -> Mostra detalhes da rede.
 
 
-DOCKER CONCEITOS BASE
+V -> DOCKER CONCEITOS BASE
 
-rodar distro -> docker run -it distro bash -> run distro
-rodar distro especificas -> docker exec -ti distro sh
-
-criar container "--name nome_container"-> docker run -dti --name NOME_CONTAINER nome_image:versão_opcional
-
-cria container com variavel de ambiente "-e VARIAVEL=valor" -> docker run -dti --name NOME_CONTAINER -e DB_NAME=bancoDados nome_image:versão_opcional
-
-criar container com porta personalizada "-p portaHost:portaContainer"-> docker run -dti --name NOME_CONTAINER -e BD_NAME=bancoDados -p 8080:80 nome_image:versão_opcional
-
-inspencionar container "inspect" -> docker inspect NOME_CONTAINER
+    rodar distro -> docker run -it distro bash -> run distro
+    rodar distro especificas -> docker exec -ti distro sh
+    
+    criar container "--name nome_container"-> docker run -dti --name NOME_CONTAINER nome_image:versão_opcional
+    
+    cria container com variavel de ambiente "-e VARIAVEL=valor" -> docker run -dti --name NOME_CONTAINER -e DB_NAME=bancoDados nome_image:versão_opcional
+    
+    criar container com porta personalizada "-p portaHost:portaContainer"-> docker run -dti --name NOME_CONTAINER -e BD_NAME=bancoDados -p 8080:80 nome_image:versão_opcional
+    
+    inspencionar container "inspect" -> docker inspect NOME_CONTAINER
 
 
 
