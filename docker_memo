@@ -1,0 +1,6 @@
+
+# construir imagem com dockerfile
+docker build -t container-name .
+  
+# Executar o container
+docker run -d -p <port>:<port> container-name
