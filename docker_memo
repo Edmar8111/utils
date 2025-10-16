@@ -1,9 +1,9 @@
 
-# construir imagem com dockerfile
-docker build -t container-name .
-  
-# Executar o container
-docker run -d -p <port>:<port> container-name
+docker images	-> Lista todas as imagens locais.
+docker pull <imagem> -> Faz o download de uma imagem do Docker Hub (ex: docker pull python:3.12).
+docker build -t <nome>:<tag> . -> Constrói uma imagem a partir de um Dockerfile.
+docker rmi <id ou nome>	-> Remove uma imagem.
+docker tag <imagem_origem> <novo_nome>	-> Renomeia uma imagem.
 
 docker version -> Mostra as versões do cliente e do servidor (daemon).
 docker info -> Exibe detalhes do ambiente (imagens, containers, drivers, etc.).
