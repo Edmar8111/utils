@@ -15,7 +15,7 @@ II -> Comandos de imagens
 
 III -> Comandos de containers
     docker run <imagem>	-> Cria e executa um container novo.
-    docker run -d <imagem> -> Executa em modo detach (segundo plano).
+    docker run -d -p <portHost>:<portContainer> <imagem> -> Executa em modo detach (segundo plano).
     docker run -it <imagem> /bin/bash -> Acessa o terminal interativo do container.
     docker exec -it <nome ou id> bash -> Entra em um container já em execução.
     docker stop <nome ou id> -> Para o container.
