@@ -69,4 +69,14 @@ POWERSHELL CURL WITH HEADERS AND PAYLOAD:
 
 para ativar a execução de scripts no powershell, e virtual venv -> Set-ExecutionPolicy -ExecutionPolicy <PolicyName> -Scope <scope>
 
-
+WINGET :
+    # instalação interativa (padrão)
+    winget install --id EricHeijnen.CheatEngine -e
+    
+    # ou, para forçar correspondência exata e suprimir prompts (quando suportado pelo instalador):
+    winget install --id EricHeijnen.CheatEngine -e --silent --accept-package-agreements --accept-source-agreements
+    # procurar pelo nome
+    winget search "Cheat Engine"
+    
+    # procurar pelo ID (se você já souber)
+    winget show --id EricHeijnen.CheatEngine -s winget
