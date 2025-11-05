@@ -80,3 +80,8 @@ WINGET :
     
     # procurar pelo ID (se você já souber)
     winget show --id EricHeijnen.CheatEngine -s winget
+
+POWERSHELL RETORNAR CONEXÕES ATIVAS:
+    Get-NetTCPConnection
+
+
